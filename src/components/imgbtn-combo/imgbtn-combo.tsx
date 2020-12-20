@@ -27,7 +27,13 @@ import { getUrl, capitalizeBreed } from '../../utils/utils'
         
       }
       else if (this.breed) {
-        this.linkUrl = "/"+this.breed
+        if (this.subbreed){
+          this.linkUrl = "/"+this.breed
+        } else {
+          this.linkUrl = "/image/" + this.breed 
+        
+        }
+
         
       }
       else {
