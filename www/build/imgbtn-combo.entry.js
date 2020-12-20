@@ -1,25 +1,5 @@
 import { r as registerInstance, h } from './index-6113ce3c.js';
-
-function format(first, middle, last) {
-  return (first || '') + (middle ? ` ${middle}` : '') + (last ? ` ${last}` : '');
-}
-function getUrl(breed, subbreed) {
-  let urlString = "https://dog.ceo/api/breed/";
-  if (breed) {
-    urlString += breed + '/';
-  }
-  if (subbreed) {
-    urlString += subbreed + '/';
-  }
-  urlString += "images/random";
-  return urlString;
-}
-function capitalizeBreed(name) {
-  if (name) {
-    return name.substr(0, 1).toUpperCase() + name.substr(1).toLowerCase();
-  }
-  return '';
-}
+import { c as capitalizeBreed, g as getUrl } from './utils-767655b9.js';
 
 const imgbtnComboCss = ":host{display:block;color:black;text-shadow:1px 0 0 #fff, 0 -1px 0 #fff, 0 1px 0 #fff, -1px 0 0 #fff}.imgbtn-combo{width:150px;height:150px;position:relative}.imgbtn{height:100px;width:100px;border-radius:5%;opacity:0.7;background-size:cover;text-align:center;padding:25px}.imgbtn:hover{opacity:1.0}.imgbtn-combo p{position:absolute;top:50%;width:100%;text-align:center;font-size:18px}";
 

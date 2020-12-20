@@ -3,8 +3,8 @@ export function format(first: string, middle: string, last: string): string {
 }
 
 export function getUrl(breed: string, subbreed:string){
-  let urlString = "https://dog.ceo/api/breed/"
-  if (breed) {
+  	let urlString = "https://dog.ceo/api/breed/"
+  	if (breed) {
 		urlString += breed + '/'
 	} 
 	if (subbreed) {

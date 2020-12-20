@@ -17,9 +17,8 @@ export class AppRoot {
           <stencil-router>
             <stencil-route-switch scrollTopOffset={0}>
               <stencil-route url="/" component="dog-fun-home" exact={true} />
+              <stencil-route url="/image/:breed/:subbreed" component="popup-image" />
               <stencil-route url="/:breed" component="dog-fun-home"/>
-              <stencil-route url="/breed/:subbreed" component="dog-fun-home" />
-              <stencil-route url="/image" component="imgbtn-combo" />
             </stencil-route-switch>
           </stencil-router>
         </main>

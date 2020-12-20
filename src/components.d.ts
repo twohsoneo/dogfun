@@ -5,11 +5,14 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { MatchResults } from "@stencil/router";
 export namespace Components {
     interface AppRoot {
     }
     interface DogFunHome {
         "breed": string;
+        "match": MatchResults;
+        "subbreed": string;
     }
     interface ImageGallery {
         "breed": string;
@@ -18,6 +21,9 @@ export namespace Components {
     interface ImgbtnCombo {
         "breed": string;
         "subbreed": string;
+    }
+    interface PopupImage {
+        "match": MatchResults;
     }
 }
 declare global {
@@ -45,11 +51,18 @@ declare global {
         prototype: HTMLImgbtnComboElement;
         new (): HTMLImgbtnComboElement;
     };
+    interface HTMLPopupImageElement extends Components.PopupImage, HTMLStencilElement {
+    }
+    var HTMLPopupImageElement: {
+        prototype: HTMLPopupImageElement;
+        new (): HTMLPopupImageElement;
+    };
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
         "dog-fun-home": HTMLDogFunHomeElement;
         "image-gallery": HTMLImageGalleryElement;
         "imgbtn-combo": HTMLImgbtnComboElement;
+        "popup-image": HTMLPopupImageElement;
     }
 }
 declare namespace LocalJSX {
@@ -57,6 +70,8 @@ declare namespace LocalJSX {
     }
     interface DogFunHome {
         "breed"?: string;
+        "match"?: MatchResults;
+        "subbreed"?: string;
     }
     interface ImageGallery {
         "breed"?: string;
@@ -66,11 +81,15 @@ declare namespace LocalJSX {
         "breed"?: string;
         "subbreed"?: string;
     }
+    interface PopupImage {
+        "match"?: MatchResults;
+    }
     interface IntrinsicElements {
         "app-root": AppRoot;
         "dog-fun-home": DogFunHome;
         "image-gallery": ImageGallery;
         "imgbtn-combo": ImgbtnCombo;
+        "popup-image": PopupImage;
     }
 }
 export { LocalJSX as JSX };
@@ -81,6 +100,7 @@ declare module "@stencil/core" {
             "dog-fun-home": LocalJSX.DogFunHome & JSXBase.HTMLAttributes<HTMLDogFunHomeElement>;
             "image-gallery": LocalJSX.ImageGallery & JSXBase.HTMLAttributes<HTMLImageGalleryElement>;
             "imgbtn-combo": LocalJSX.ImgbtnCombo & JSXBase.HTMLAttributes<HTMLImgbtnComboElement>;
+            "popup-image": LocalJSX.PopupImage & JSXBase.HTMLAttributes<HTMLPopupImageElement>;
         }
     }
 }

@@ -7,7 +7,7 @@ const DogFunHome = class {
     registerInstance(this, hostRef);
   }
   render() {
-    return (h("div", { class: "dog-fun-home" }, h("image-gallery", { breed: this.breed })));
+    return (h("div", { class: "dog-fun-home" }, h("image-gallery", { breed: this.match.params.breed, subbreed: this.match.params.subbreed })));
   }
 };
 DogFunHome.style = dogFunHomeCss;

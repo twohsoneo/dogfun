@@ -12,7 +12,7 @@ import { getUrl, capitalizeBreed } from '../../utils/utils'
 
     @Prop() subbreed: string;
 
-    //@Element() el: HTMLElement;
+    
 
     imageUrl: string; 
     private capitalizeBreed(name: string): string {
