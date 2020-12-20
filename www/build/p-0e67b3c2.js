@@ -1,0 +1,1 @@
+function e(e,t){let n="https://dog.ceo/api/breed/";return e&&(n+=e+"/"),t&&(n+=t+"/"),n+="images/random",n}function t(e){return e?e.substr(0,1).toUpperCase()+e.substr(1).toLowerCase():""}export{t as c,e as g}
