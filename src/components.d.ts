@@ -6,56 +6,81 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface AppRoot {
+    }
+    interface DogFunHome {
+        "breed": string;
+    }
+    interface ImageGallery {
+        "breed": string;
+        "subbreed": string;
+    }
+    interface ImgbtnCombo {
+        "breed": string;
+        "subbreed": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLAppRootElement: {
+        prototype: HTMLAppRootElement;
+        new (): HTMLAppRootElement;
+    };
+    interface HTMLDogFunHomeElement extends Components.DogFunHome, HTMLStencilElement {
+    }
+    var HTMLDogFunHomeElement: {
+        prototype: HTMLDogFunHomeElement;
+        new (): HTMLDogFunHomeElement;
+    };
+    interface HTMLImageGalleryElement extends Components.ImageGallery, HTMLStencilElement {
+    }
+    var HTMLImageGalleryElement: {
+        prototype: HTMLImageGalleryElement;
+        new (): HTMLImageGalleryElement;
+    };
+    interface HTMLImgbtnComboElement extends Components.ImgbtnCombo, HTMLStencilElement {
+    }
+    var HTMLImgbtnComboElement: {
+        prototype: HTMLImgbtnComboElement;
+        new (): HTMLImgbtnComboElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "app-root": HTMLAppRootElement;
+        "dog-fun-home": HTMLDogFunHomeElement;
+        "image-gallery": HTMLImageGalleryElement;
+        "imgbtn-combo": HTMLImgbtnComboElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface AppRoot {
+    }
+    interface DogFunHome {
+        "breed"?: string;
+    }
+    interface ImageGallery {
+        "breed"?: string;
+        "subbreed"?: string;
+    }
+    interface ImgbtnCombo {
+        "breed"?: string;
+        "subbreed"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "app-root": AppRoot;
+        "dog-fun-home": DogFunHome;
+        "image-gallery": ImageGallery;
+        "imgbtn-combo": ImgbtnCombo;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "dog-fun-home": LocalJSX.DogFunHome & JSXBase.HTMLAttributes<HTMLDogFunHomeElement>;
+            "image-gallery": LocalJSX.ImageGallery & JSXBase.HTMLAttributes<HTMLImageGalleryElement>;
+            "imgbtn-combo": LocalJSX.ImgbtnCombo & JSXBase.HTMLAttributes<HTMLImgbtnComboElement>;
         }
     }
 }
