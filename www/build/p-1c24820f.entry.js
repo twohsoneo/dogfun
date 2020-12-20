@@ -1,1 +1,0 @@
-import{r as e,h as r}from"./p-70edbb24.js";const s=class{constructor(r){e(this,r)}render(){return r("div",{class:"dog-fun-home"},r("image-gallery",{breed:this.match.params.breed,subbreed:this.match.params.subbreed}))}};s.style="";export{s as dog_fun_home}
