@@ -4,7 +4,7 @@ export function format(first: string, middle: string, last: string): string {
 
 export function getUrl(breed: string, subbreed:string){
   	let urlString = "https://dog.ceo/api/breed/"
-  	if (breed) {
+	  if (breed) {
 		urlString += breed + '/'
 	} 
 	if (subbreed) {
@@ -12,6 +12,13 @@ export function getUrl(breed: string, subbreed:string){
 	}
 	urlString += "images/random"
 	return urlString
+}
+
+export function getSBUrl(breed: string){
+	let urlString = "https://dog.ceo/api/breed/"
+	urlString += breed + '/'
+  	urlString += "list"
+  return urlString
 }
 
 export function capitalizeBreed(name: string) {

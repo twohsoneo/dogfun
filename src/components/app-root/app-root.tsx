@@ -14,6 +14,7 @@ export class AppRoot {
         </header>
 
         <main>
+        
           <stencil-router>
             <stencil-route-switch scrollTopOffset={0}>
               <stencil-route url="/" component="dog-fun-home" exact={true} />
@@ -22,7 +23,9 @@ export class AppRoot {
               <stencil-route url="/:breed" component="dog-fun-home"/>
             </stencil-route-switch>
           </stencil-router>
-        </main>
+          <stencil-route-link url='/'><button>Start Over</button></stencil-route-link>
+          </main>
+
       </div>
     );
   }

@@ -19,6 +19,8 @@ export class DogFunHome {
   render() {
     return (
       <div class="dog-fun-home">
+        <h2>Welcome the best random dog image website. Click on an image to search by breed/subbreed.</h2>
+        
         <image-gallery breed={this.match.params.breed} subbreed={this.match.params.subbreed}></image-gallery>
       </div>
     );

@@ -1,5 +1,5 @@
 import { Component, Prop, h } from '@stencil/core';
-import { getUrl, capitalizeBreed } from '../../utils/utils'
+import { getSBUrl, getUrl, capitalizeBreed } from '../../utils/utils'
 
 @Component({
     tag: 'imgbtn-combo',
@@ -12,22 +12,27 @@ import { getUrl, capitalizeBreed } from '../../utils/utils'
 
     @Prop() subbreed: string;
 
-    
+    sbToggle: boolean = false;
     linkUrl: string;
     imageUrl: string; 
+    sbUrl: string;
     private capitalizeBreed(name: string): string {
       return capitalizeBreed(name)
     }
     private getUrl(): string {
       return getUrl(this.breed, this.subbreed);
     }
+    private getSBUrl(): string {
+      return getSBUrl(this.breed)
+    }
+
     private breedLink(): string {
       if (this.subbreed) {
         this.linkUrl = "/image/" + this.breed +"/" + this.subbreed
         
       }
       else if (this.breed) {
-        if (this.subbreed){
+        if (this.sbToggle){
           this.linkUrl = "/"+this.breed
         } else {
           this.linkUrl = "/image/" + this.breed 
@@ -45,9 +50,17 @@ import { getUrl, capitalizeBreed } from '../../utils/utils'
     }
 
     async componentWillLoad() {
+      const sbResponse = await fetch(this.getSBUrl())
+      let sbJson = await sbResponse.json()
+      this.sbUrl = await sbJson.message
+      if(this.sbUrl.length> 0){
+        this.sbToggle = !this.sbToggle
+      }
+      
       const response = await fetch(this.getUrl());
       let json = await response.json();
       this.imageUrl = await json.message
+            
     }
 
       

@@ -53,6 +53,9 @@ async componentWillLoad() {
  
 
 render() {
-return <div class='image-gallery'>{this.dogsMap}</div>;
+return <div class='image-gallery'>
+  {this.dogsMap}
+
+</div>;
     }
 }
