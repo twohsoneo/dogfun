@@ -71,7 +71,7 @@ import { getSBUrl, getUrl, capitalizeBreed } from '../../utils/utils'
         <div class='imgbtn'  style={{'background-image': `url(${this.imageUrl})`}} >
           
         </div>
-        <p>{this.capitalizeBreed(this.subbreed)?this.capitalizeBreed(this.subbreed) + " " + this.capitalizeBreed(this.breed):this.capitalizeBreed(this.breed)}</p> 
+        <p>{this.capitalizeBreed(this.subbreed)?this.capitalizeBreed(this.subbreed) :this.capitalizeBreed(this.breed)}</p> 
       </div>
       </stencil-route-link>
       )

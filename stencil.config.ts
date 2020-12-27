@@ -17,7 +17,7 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null,
       copy: [
-        {src:  "_redirects"}
+        { src: 'assets/fontawesome-free/webfonts', dest: 'webfonts' }
       ] // disable service workers
     },
   ],

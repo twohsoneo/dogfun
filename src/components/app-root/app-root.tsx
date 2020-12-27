@@ -24,6 +24,7 @@ export class AppRoot {
             </stencil-route-switch>
           </stencil-router>
           <stencil-route-link url='/'><button>Start Over</button></stencil-route-link>
+          
           </main>
 
       </div>

@@ -25,11 +25,13 @@
 }
 
 .imgbtn-combo p {
+
   position: absolute;
   top: 50%;
   width: 100%;
   text-align: center;
-  font-size: 18px;
+  font-size: 25px;
+  color:black
 }
 
   

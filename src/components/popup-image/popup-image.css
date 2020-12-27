@@ -1,8 +1,24 @@
+@import '../../assets/fontawesome-free/css/all.css';
+
 * {
     text-align: center;
-}
 
+}
+i::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-size: 42px;
+  }
+
+a {
+    color:inherit;
+    text-decoration: none;
+}
 img {
     height: 500px;
     width: auto;
 }
+
